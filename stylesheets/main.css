@@ -1,0 +1,190 @@
+/*---- RESET_LITE.CSS ----*/
+html, body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+/*---- END RESET_LITE.CSS ----*/
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#face {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: #ccc;
+  border-width: 8px;
+  border-color: #444;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.tickLarge {
+  width: 8px;
+  height: 328px;
+  border-top: 28px;
+  border-bottom: 28px;
+  border-style: solid;
+  border-color: #444;
+  background-color: #ccc;
+  position: absolute;
+  top: -192px;
+  left: -4px;
+}
+
+.tickSmall {
+  width: 4px;
+  height: 356px;
+  border-top: 14px;
+  border-bottom: 14px;
+  border-style: solid;
+  border-color: #444;
+  background-color: #ccc;
+  position: absolute;
+  top: -28px;
+  left: 2px;
+}
+
+#diskSecond {
+  width: 28px;
+  height: 28px;
+  background-color: #444;
+  border-radius: 50%;
+  position: relative;
+  top: -14px;
+  left: -14px;
+}
+
+#diskSecond div {
+  width: 4px;
+  height: 14px;
+  background-color: #ccc;
+  margin: auto;
+}
+
+body {
+  text-align: center;
+}
+
+.centerPoint {
+  width: 0;
+  height: 0;
+  position: relative;
+  top: 200px;
+  left: 200px;
+}
+
+#tickLarge_0_6 {
+  transform: rotate(0deg);
+}
+
+#tickLarge_1_7 {
+  transform: rotate(30deg);
+}
+
+#tickLarge_2_8 {
+  transform: rotate(60deg);
+}
+
+#tickLarge_3_9 {
+  transform: rotate(90deg);
+}
+
+#tickLarge_4_10 {
+  transform: rotate(120deg);
+}
+
+#tickLarge_5_11 {
+  transform: rotate(150deg);
+}
+
+#tickSmall_1 {
+  transform: rotate(6deg);
+}
+
+#tickSmall_2 {
+  transform: rotate(12deg);
+}
+
+#tickSmall_3 {
+  transform: rotate(18deg);
+}
+
+#tickSmall_4 {
+  transform: rotate(24deg);
+}
+
+#pivotMinute {
+  transform: rotate(0deg);
+}
+
+#pivotHour {
+  transform: rotate(0deg);
+}
+
+#pivotSecond {
+  transform: rotate(0deg);
+}
+
+#pivotDisk {
+  transform: rotate(0deg);
+  animation: rotateAnim linear infinite;
+  animation-duration: 1s;
+}
+
+#handMinute {
+  transform-origin: 50% 100%;
+  width: 8px;
+  height: 0;
+  border-top: 156px;
+  border-style: solid;
+  border-color: #444;
+  position: relative;
+  top: -156px;
+  left: -4px;
+  animation: rotateAnim linear infinite;
+  animation-duration: 3600s;
+}
+
+#handHour {
+  transform-origin: 50% 100%;
+  width: 9.6px;
+  height: 0;
+  border-top: 117px;
+  border-style: solid;
+  border-color: #444;
+  position: relative;
+  top: -117px;
+  left: -4.8px;
+  animation: rotateAnim linear infinite;
+  animation-duration: 43200s;
+}
+
+#handSecond {
+  transform-origin: 50% 100%;
+  width: 4px;
+  height: 0;
+  border-top: 170px;
+  border-style: solid;
+  border-color: #444;
+  position: relative;
+  top: -170px;
+  left: -2px;
+  animation: rotateAnim linear infinite;
+  animation-duration: 60s;
+}

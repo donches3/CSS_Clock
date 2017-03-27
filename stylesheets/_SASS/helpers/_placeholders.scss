@@ -1,0 +1,56 @@
+// PLACEHOLDERS
+
+%makeClockFace {
+  width: $faceDiam;
+  height: $faceDiam;
+  margin: auto;
+  margin-top: 50px;
+  background-color: $colorField;
+  border-width: $tickWidth;
+  border-color: $colorLine;
+  border-style: solid;
+  border-radius: 50%;
+} // end placeholder makeClockFace
+
+%makeTickLarge {
+  width: $tickWidth;
+  height: $tickPairLargeHeight;
+  border-top: $tickLengthLarge;
+  border-bottom: $tickLengthLarge;
+  border-style: solid;
+  border-color: $colorLine;
+  background-color: $colorField;  // actual
+  position: absolute;
+  top: $tickDiam / -2;
+  left: $tickWidth / -2;
+} // end placeholder makeTickLarge
+
+%makeTickSmall {
+  width: $tickWidthSmall;
+  height: $tickPairSmallHeight;
+  border-top: $tickLengthSmall;
+  border-bottom: $tickLengthSmall;
+  border-style: solid;
+  border-color: $colorLine;
+  background-color: $colorField;  // actual
+  position: absolute;
+  top: -$tickLengthLarge;
+  left: ($tickWidth - $tickWidthSmall) / 2;
+} // end placeholder makeTickSmall
+
+%makeDiskSecond {
+  width: $diskDiam;
+  height: $diskDiam;
+  background-color: $colorLine;
+  border-radius: 50%;
+  position: relative;
+  top: -$diskDiam / 2;
+  left: -$diskDiam / 2;
+
+  div { // marker
+    width: $handWidthSecond;
+    height: $diskDiam / 2;
+    background-color: $colorField;
+    margin: auto;
+  }
+} // end placeholder makeDiskSecond

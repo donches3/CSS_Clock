@@ -1,0 +1,78 @@
+
+body {
+  text-align: center;
+}
+
+#face {
+  @extend %makeClockFace;
+}
+
+.centerPoint {
+  width: 0;
+  height: 0;
+  position: relative;
+  top:  $faceDiam / 2;
+  left: $faceDiam / 2;
+}
+
+//  --------------------  Tick Marks  --------------------
+.tickLarge {  @extend %makeTickLarge;  }
+.tickSmall {  @extend %makeTickSmall;  }
+
+#tickLarge_0_6  {  transform: rotate(0deg);    }
+#tickLarge_1_7  {  transform: rotate(30deg);   }
+#tickLarge_2_8  {  transform: rotate(60deg);   }
+#tickLarge_3_9  {  transform: rotate(90deg);   }
+#tickLarge_4_10 {  transform: rotate(120deg);  }
+#tickLarge_5_11 {  transform: rotate(150deg);  }
+
+#tickSmall_1 {  transform: rotate(6deg);   }
+#tickSmall_2 {  transform: rotate(12deg);  }
+#tickSmall_3 {  transform: rotate(18deg);  }
+#tickSmall_4 {  transform: rotate(24deg);  }
+
+
+
+//  --------------------  Pivots with initial rotationss  --------------------
+#pivotMinute {
+  transform: rotate(0deg); // set initial time here, minutes
+}
+
+#pivotHour {
+  transform: rotate(0deg); // set initial time here, hours
+}
+
+#pivotSecond {
+  transform: rotate(0deg); // set initial time here, seconds
+}
+
+#pivotDisk {
+  transform: rotate(0deg);
+  @include animateHand($speedDisk);
+}
+
+//  --------------------  Hands, animated  --------------------
+#handMinute {
+  transform-origin: 50% 100%;
+  @include makeHand ($handWidthMinute,    // Hand Width
+                     $handLengthMinute);  // Hand Length
+  @include animateHand($speedMinute);
+}
+
+#handHour {
+  transform-origin: 50% 100%;
+  @include makeHand ($handWidthHour,    // Hand Width
+                     $handLengthHour);  // Hand Length
+  @include animateHand($speedHour);
+}
+
+#handSecond {
+  transform-origin: 50% 100%;
+  @include makeHand ($handWidthSecond,    // Hand Width
+                     $handLengthSecond);  // Hand Length
+  @include animateHand($speedSecond);
+}
+
+#diskSecond {
+  @extend %makeDiskSecond;
+}

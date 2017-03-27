@@ -1,0 +1,33 @@
+// SASS VARS
+// Clock  ------------------------------------------
+
+// Colors
+$colorLine: #444;
+$colorField: #ccc;
+
+$faceDiam: 400px;
+
+// Tick Marks
+$tickLengthLarge: 28px;
+$tickLengthSmall: 14px;
+$tickWidth: 8px;
+$tickWidthSmall: $tickWidth / 2;
+$tickGap: $tickWidth;
+$tickDiam: $faceDiam - ($tickGap * 2);
+$tickPairLargeHeight: $tickDiam - ($tickLengthLarge * 2);
+$tickPairSmallHeight: $tickDiam - ($tickLengthSmall * 2);
+
+// Hands
+$handLengthMinute: ($tickPairLargeHeight / 2) - $tickGap;
+$handLengthHour: $handLengthMinute * 0.75;
+$handLengthSecond: ($tickPairSmallHeight / 2) - $tickGap;
+$handWidthMinute: $tickWidth;
+$handWidthHour: $tickWidth * 1.2;
+$handWidthSecond: $tickWidth * 0.5;
+$diskDiam: 28px;
+
+// Animation
+$speedDisk:    1s;
+$speedSecond: 60s;
+$speedMinute: 60s * 60;
+$speedHour:   60s * 60 * 12;

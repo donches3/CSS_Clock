@@ -1,0 +1,32 @@
+// SASS MIXINS
+
+@mixin makeHand ( $handWidth:$handWidthMinute,
+                  $handLength:$handLengthMinute )
+{
+  width: $handWidth;
+  height: 0;
+  border-top: $handLength;
+  border-style: solid;
+  border-color: $colorLine;
+  position: relative;
+  top: -$handLength;
+  left: $handWidth / -2;
+} // end Mixin makeHand
+
+
+//  Animation  ------------------------
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg + 360deg);
+  }
+} // end keyframes
+
+@mixin animateHand($animDuration:1s)
+{
+  // animation: rotateAnim linear infinite alternate;
+  animation: rotateAnim linear infinite;
+  animation-duration: $animDuration;
+}
